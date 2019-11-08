@@ -20,7 +20,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
-
+  
 </head>
 
 <body>
@@ -69,15 +69,29 @@
 
   <!-- Main Content -->
   <div class="container">
-    <div class="row">
+    <!--<div class="row">-->
+	<!--tab-->
       <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+	  <ul class="nav nav-pills" role="tablist">
+		<li role="presentation" class="active"><a href="#programmer" aria-controls="programmer" 
+		role="tab" data-toggle="tab" style="text-decoration:none; padding:5px">
+		Programmer</a></li>
+		<li role="presentation" class="active"><a href="#writer" aria-controls="writer" 
+		role="tab" data-toggle="tab" style="text-decoration:none; padding:5px">
+		Writer</a></li>
+		<li role="presentation" class="active"><a href="#musician" aria-controls="musician" 
+		role="tab" data-toggle="tab" style="text-decoration:none; padding:5px">
+		Musician</a></li>
+	  </ul>
+	  <hr>
+	  <div class="tab-content">
+		<div role="tabpanel" class = "tab-pane active" id="programmer">this is programmer</div>
+		<div role="tabpanel" class = "tab-pane" id="writer">this is writer</div>
+		<div role="tabpanel" class = "tab-pane" id="musician">this is musician</div>
+	  </div>
       </div>
-    </div>
+	<!--</div>-->
   </div>
-
   <hr>
 
   <!-- Footer -->
