@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="ECAC Open House Information Website">
+<meta name="keywords" content="Open House, Edmonton, Church, Chinese Community">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {box-sizing: border-box}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header_column{
+	list-style-type:none;
+	margin: 0px;
+	padding: 0px;
+	background-color: #333333;
+}
+
+.header_button{
+	float: left;
+	display:block;
+	color:white;
+	background-color:#333333;
+	text-align: center;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	text-decoration:none;
+}
+
+.header_button:hover{
+	background-color:#111111;
+}
+
+.dropdown{
+	position:relative;
+	display: inline-block;
+}
+.dropdown-container{
+	display: none;
+	position: absolute;
+	margin-top:50px;
+	background-color:#444444;
+	min-width:160px;
+	z-index:1;
+}
+
+.dropdown-box{
+	color:white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown:hover .dropdown-container{display:block;}
+.dropdown-container:hover{background-color#111111;}
+
+<!--Slider settings-->
+.mySlides {display: none;}
+.toCenter{padding-left:32.5%;}
+.mySlides_vertical{display:none;
+<!--this padding is for the image-->
+}
+
+img {vertical-align: middle;
+box-shadow:0 0 20px rgba(0,0,0,0.8);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width:auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 50px 50px 0;
+  user-select: none;
+  background-color:#444444;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 1px;
+  border-radius: 50px 0px 0px 50px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #111111;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.Paragraph-container{
+	max-width:1000px;
+	position:relative;
+	margin:auto;
+
+}
+
+.Paragraph{
+	display:none;
+}
+</style>
+</head>
+
+<body>
+<h1> Place for logo and header</h1>
+<div class="header_column">
+	<div class="dropdown"><button class="header_button" href="#home">home</button></div>
+	<div class="dropdown">
+		<button class="header_button">language</button>
+		<div class="dropdown-container">
+			<a class="dropdown-box" href="#event1">Chinese(s)</a>
+			<a class="dropdown-box" href="#event2">Chinese(t)</a>
+			<a class="dropdown-box" href="#event3">English</a>
+		</div>
+	</div>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade toCenter">
+  
+  <img src="PosterC.png" alt="PosterC" style="width:50%;height:50%">
+  <div class="text">1/2</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="623TVScreen.jpg" alt="623Poster" style="width:100%;height:100%">
+  <div class="text">2/2</div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br/>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span>  
+</div>
+
+<!--events description-->
+<div class="Paragraph-container">
+	<div class="Paragraph fade">
+		<h1>description</h1>
+		<p style="border-top:6px solid red">this is an event</p>
+	</div>
+	
+	<div class="Paragraph fade">
+		<h1>description2</h1>
+		<p style="border-top:6px solid red">this is event2</p>
+	</div>
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  var par = document.getElementsByClassName("Paragraph");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  
+  for (i = 0; i < slides.length; i++) {
+	slides[i].style.display = "none";
+	par[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+	slides[slideIndex-1].style.display="block";
+	par[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+</script>
+</body>
+</html>
